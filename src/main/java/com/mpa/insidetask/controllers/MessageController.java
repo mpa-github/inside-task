@@ -52,7 +52,7 @@ public class MessageController {
         return String.format("A message from '%s' has been posted.", user.getName());
     }
 
-    @GetMapping("/user/messages")
+    @PostMapping("/user/messages")
     public List<MessageDTO> getMessages(@AuthenticationPrincipal UserDetails userDetails,
                                         @RequestParam(name = "limit", required = true) int limit) {
         User user = userService.findUser(userDetails.getUsername());

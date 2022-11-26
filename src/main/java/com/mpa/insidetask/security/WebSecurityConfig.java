@@ -32,7 +32,7 @@ public class WebSecurityConfig {
         http.csrf().disable().headers().frameOptions().disable();
         http.authorizeRequests()
             .mvcMatchers(HttpMethod.POST,"/api/user/message").hasRole("USER")
-            .mvcMatchers(HttpMethod.GET,"/api/user/messages").hasRole("USER")
+            .mvcMatchers(HttpMethod.POST,"/api/user/messages").hasRole("USER")
             .mvcMatchers(HttpMethod.POST,"/api/auth/signup").permitAll()
             .anyRequest().authenticated();
         //http.addFilter();
