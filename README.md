@@ -8,8 +8,9 @@ Java version "11.0.3"<br/>
 ___
 ### How to use?
 * Clone repository.
-* Start PostgreSQL Server and create empty database.<br/>
-Spring connection property: "jdbc:postgresql://localhost:5432/users_db"
+* Start PostgreSQL Server and create database "dbname".
+* Set spring connection property: "spring.datasource.url=jdbc:postgresql://localhost:5432/dbname"
+* Set spring.datasource.username&password settings.
 * Start the App. All initial data will be loaded to the database.
 
 API endpoints (http://localhost:3000):<br/>
